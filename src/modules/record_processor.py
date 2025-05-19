@@ -3,6 +3,7 @@ import trafilatura
 from bunkai import Bunkai
 import requests
 from src.modules.image_processor import ImageProcessor
+from src.config import config
 
 
 class RecordProcessor:
@@ -69,11 +70,7 @@ class RecordProcessor:
         """
         return trafilatura.extract(
             content,
-            include_formatting=False,
-            include_images=False,
-            include_tables=False,
-            include_comments=False,
-            no_fallback=True,
+            **config.TRAFILATURA_SETTINGS,
             url=url,
         )
 

@@ -1,4 +1,5 @@
-from dataclasses import dataclass
+from dataclasses import dataclass, field
+from typing import Dict, Any
 
 
 @dataclass
@@ -9,3 +10,15 @@ class Config:
     """
 
     DEFAULT_ENCODING: str = "utf-8"
+    TRAFILATURA_SETTINGS: Dict[str, Any] = field(
+        default_factory=lambda: {
+            "include_formatting": False,
+            "include_images": False,
+            "include_tables": False,
+            "include_comments": False,
+            "no_fallback": True,
+        }
+    )
+
+
+config = Config()

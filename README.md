@@ -2,12 +2,12 @@
 
 ## Overview
 
-`momiji_generator` is a Python tool designed to process and generate image-text interleaved data. It can extract textual information (specifically `text` and `text_list` fields) from the [MOMIJI dataset](https://huggingface.co/datasets/turing-motors/MOMIJI) and can also fetch HTML from URLs to create similar interleaved data.
+`momiji_generator` is a Python tool designed to process and generate image-text interleaved data. It can fetch HTML from URLs to create interleaved data, including `text` and `text_list` fields, and is also designed to work with the [MOMIJI dataset](https://huggingface.co/datasets/turing-motors/MOMIJI) by processing entries and generating these fields from source URLs.
 
 ## Features
 
-*   Extracts `text` and `text_list` from entries in the MOMIJI dataset.
-*   Downloads HTML content from specified URLs to generate image-text interleaved data.
+*   Downloads HTML content from specified URLs to generate image-text interleaved data, including `text` and `text_list` fields.
+*   Processes entries from the [MOMIJI dataset](https://huggingface.co/datasets/turing-motors/MOMIJI), assuming `text` and `text_list` fields will be populated from source URLs.
 
 ## Requirements
 
