@@ -1,0 +1,13 @@
+[project]
+name = "momiji_generator"
+version = "0.1.0"
+description = "Generate Momiji-style text from dataset"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "bs4>=0.0.2",
+    "bunkai>=1.5.7",
+    "mypy>=1.13.0",
+    "requests>=2.32.3",
+    "trafilatura>=2.0.0",
+]
